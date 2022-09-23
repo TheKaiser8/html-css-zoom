@@ -20,19 +20,19 @@
 /* .debug .row {
     background-color: white;
 } */
-.debug .video-box {
+/* .debug .video-box {
     background-color: blue;
-}
-.debug footer {
+} */
+/* .debug footer {
     height: 90px;
     background-color: gold;
-}
-.debug .button-tools {
+} */
+/* .debug .button-tools {
     background-color: lightgreen;
-}
-.button-tools.management {
+} */
+/* .button-tools.management {
     background-color: coral;
-}
+} */
 /*------------
     TYPOGRAPHY
 --------------*/
@@ -46,9 +46,6 @@ body {
 /*------------
     COMMON
 --------------*/
-/* .row {
-    display: flex;
-} */
 /*------------
     HEADER
 --------------*/
@@ -58,17 +55,28 @@ header {
 .icons {
     text-align: right;
 }
+
 /*------------
     BUTTONS
 --------------*/
+button {
+    border: none;
+}
 .icons button {
     background-color: #4a4a4a;
-    border-style: none;
     color: inherit;
     padding: 4px 4px;
     border-radius: 5px;
-    cursor: pointer;
 }
+.col-tool button {
+    color: inherit;
+    background-color: transparent;
+    margin-bottom: 5px;
+}
+.management.tools .col-tool:nth-child(4) {
+    color: #4bc800;
+}
+
 /*------------
     MAIN
 --------------*/
@@ -104,22 +112,41 @@ section {
     bottom: 0;
     left: 0;
 }
-/* .boxes-video {
-    flex-wrap: wrap;
-}
-.video-box {
-    height: calc(100% / 5);
-} */
 /*------------
     FOOTER
 --------------*/
+footer {
+    height: 80px;
+    background-color: #222222;
+}
 .row-buttons {
-    display: flex;
+    height: 100%;
+    display: flex;  
 }
-.button-tools {
-    height: 70px;
+.tools {
+    height: 100%;
     width: 20%;
+    display: flex;
+    align-items: center;
 }
-.button-tools.management {
+.col-tool {
+    margin: 0 10px;
+    font-size: 12px;
+    text-align: center;
+}
+.management.tools {
     width: 60%;
+    justify-content: center;
+}
+.end.tools {
+    justify-content: flex-end;
+}
+.end .col-tool {
+    background-color: #4a4a4a;
+    padding: 0 20px;
+    height: 100%;
+    text-align: center;
+}
+.end.tools .text-tool {
+    color: #ff0026; 
 }
